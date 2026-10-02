@@ -1,0 +1,47 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
+*~
+
+# Logs / env / secrets
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+dist/
+build/
+*.egg-info/
+
+# 数据与权重（体积大，需本地准备 / 训练生成）
+data/raw/
+data/processed/
+outputs/*
+!outputs/.gitkeep
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# 本地缓存
+.wheels/
+wandb/
+runs/
+.ipynb_checkpoints/
+_tmp/
+tmp/
+*.local

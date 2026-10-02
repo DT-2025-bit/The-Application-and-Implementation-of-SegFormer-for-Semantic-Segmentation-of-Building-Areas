@@ -1,0 +1,29 @@
+model_name: segformer_b0_edge_l01
+encoder: mit-b0
+num_classes: 2
+pretrained: true
+
+train_image_dir: data/processed/massachusetts/train/images
+train_mask_dir: data/processed/massachusetts/train/masks
+val_image_dir: data/processed/massachusetts/val/images
+val_mask_dir: data/processed/massachusetts/val/masks
+img_size: 512
+
+batch_size: 4
+num_workers: 4
+epochs: 80
+lr: 6.0e-5
+weight_decay: 0.01
+warmup_epochs: 5
+amp: true
+
+ce_weight: 1.0
+dice_weight: 1.0
+edge_weight: 0.1
+edge_kernel: 3
+
+seed: 42
+save_dir: outputs/segformer_b0_edge_l01
+log_interval: 20
+val_interval: 1
+early_stop_patience: 15
